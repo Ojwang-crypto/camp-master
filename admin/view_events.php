@@ -13,7 +13,7 @@
         <ol class="breadcrumb"><!-- breadcrumb begin -->
             <li class="active"><!-- active begin -->
                 
-                <i class="fa fa-dashboard"></i> Dashboard / View eventducts
+                <i class="fa fa-dashboard"></i> Dashboard / View events
                 
             </li><!-- active finish -->
         </ol><!-- breadcrumb finish -->
@@ -26,7 +26,7 @@
             <div class="panel-heading"><!-- panel-heading begin -->
                <h3 class="panel-title"><!-- panel-title begin -->
                
-                   <i class="fa fa-tags"></i>  View eventducts
+                   <i class="fa fa-tags"></i>  View events
                 
                </h3><!-- panel-title finish --> 
             </div><!-- panel-heading finish -->
@@ -68,8 +68,8 @@
                                     
                                     $details = $row_event['details'];
                                     
-                                    $date = $row_event['newsletter'];
-                                    $newsletter = $row_event['date'];
+                                    $date = $row_event['date'];
+                                    $newsletter = $row_event['newsletter'];
                                     
                                     $i++;
                             

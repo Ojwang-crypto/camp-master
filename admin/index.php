@@ -111,9 +111,9 @@
                         
                         include("view_events.php");
                         
-                }   if(isset($_GET['delete_p_cat'])){
+                }   if(isset($_GET['add_events'])){
                         
-                        include("delete_p_cat.php");
+                        include("add_events.php");
                         
                 }   if(isset($_GET['edit_p_cat'])){
                         
