@@ -139,6 +139,9 @@ if(isset($_POST['submit'])){
     $details = $_POST['details'];
     $date = $_POST['date'];
     $newsletter = $_FILES['newsletter']['name'];
+    $temp_newsletter = $_FILES['newsletter']['tmp_name'];
+    
+    move_uploaded_file($temp_newsletter,"newsletters/$newsletter");
     
     $add_event = "insert into events (event,venue,details,date,newsletter) values ('$event','$venue','$details','$date','$newsletter')";
     
