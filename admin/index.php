@@ -64,7 +64,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shepresident_empire Admin Area</title>
+    <title>Camp Admin Area</title>
     <link rel="stylesheet" href="css/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -86,27 +86,28 @@
                         
                         include("dashboard.php");
                         
-                }   if(isset($_GET['insert_product'])){
+                // }   if(isset($_GET['insert_product'])){
                         
-                        include("insert_product.php");
+                //         include("insert_product.php");
                         
-                }   if(isset($_GET['view_products'])){
+                // }   if(isset($_GET['view_products'])){
                         
-                        include("view_products.php");
+                //         include("view_products.php");
                         
-                }   if(isset($_GET['delete_product'])){
+                // }   if(isset($_GET['delete_product'])){
                         
-                        include("delete_product.php");
+                //         include("delete_product.php");
                         
-                }   if(isset($_GET['edit_product'])){
+                // }   if(isset($_GET['edit_product'])){
                         
-                        include("edit_product.php");
+                //         include("edit_product.php");
                         
-                }   if(isset($_GET['insert_p_cat'])){
+                // }   if(isset($_GET['insert_p_cat'])){
                         
-                        include("insert_p_cat.php");
+                //         include("insert_p_cat.php");
                         
-                }   if(isset($_GET['view_events'])){//edited
+                }   
+                if(isset($_GET['view_events'])){//edited
                         
                         include("view_events.php");
                         

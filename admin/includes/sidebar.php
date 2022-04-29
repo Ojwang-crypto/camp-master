@@ -103,7 +103,7 @@
             </li><!-- li finish -->
             
             <li><!-- li begin -->
-                <a href="index.php?view_events" <!-- a href begin -->
+                <a href="index.php?view_events" >
                         
                         <i class="fa fa-fw fa-tag"></i> View Events
                         <i class="fa fa-fw fa-caret-down"></i>
@@ -113,27 +113,15 @@
             </li><!-- li finish -->
             
             <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#p_cat"><!-- a href begin -->
+                <a href="index.php?add_events" >
                         
-                        <i class="fa fa-fw fa-edit"></i> Add Events
-                        <i class="fa fa-fw fa-caret-down"></i>
-                        
-                </a><!-- a href finish -->
-
-                
-            </li><!-- li finish -->
-            
-            
-            <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#slides"><!-- a href begin -->
-                        
-                        <i class="fa fa-fw fa-gear"></i> View Events
+                        <i class="fa fa-fw fa-tag"></i> Add Events
                         <i class="fa fa-fw fa-caret-down"></i>
                         
                 </a><!-- a href finish -->
                 
-               
             </li><!-- li finish -->
+            
             
             <li><!-- li begin -->
                 <a href="#"><!-- a href begin -->
