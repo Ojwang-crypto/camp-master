@@ -101,6 +101,16 @@
                 </a><!-- a href finish -->
                 
             </li><!-- li finish -->
+
+            <li><!-- li begin -->
+                <a href="index.php?add_events" >
+                        
+                        <i class="fa fa-fw fa-tag"></i> Add Events
+                        <i class="fa fa-fw fa-caret-down"></i>
+                        
+                </a><!-- a href finish -->
+                
+            </li><!-- li finish -->
             
             <li><!-- li begin -->
                 <a href="index.php?view_events" >
@@ -111,11 +121,21 @@
                 </a><!-- a href finish -->
                 
             </li><!-- li finish -->
-            
+
             <li><!-- li begin -->
-                <a href="index.php?add_events" >
+                <a href="index.php?add_newsletter" >
                         
-                        <i class="fa fa-fw fa-tag"></i> Add Events
+                        <i class="fa fa-fw fa-tag"></i> Add Newsletter
+                        <i class="fa fa-fw fa-caret-down"></i>
+                        
+                </a><!-- a href finish -->
+                
+            </li><!-- li finish -->
+
+            <li><!-- li begin -->
+                <a href="index.php?view_newsletter" >
+                        
+                        <i class="fa fa-fw fa-tag"></i> View Newsletter
                         <i class="fa fa-fw fa-caret-down"></i>
                         
                 </a><!-- a href finish -->

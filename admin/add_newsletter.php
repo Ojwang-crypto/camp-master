@@ -16,7 +16,7 @@
             
             <li class="active"><!-- active Begin -->
                 
-                <i class="fa fa-dashboard"></i> Dashboard / Add events
+                <i class="fa fa-dashboard"></i> Dashboard / Add Newsletter
                 
             </li><!-- active Finish -->
             
@@ -36,7 +36,7 @@
                
                <h3 class="panel-title"><!-- panel-title Begin -->
                    
-                   <i class="fa fa-money fa-fw"></i> Add Events
+                   <i class="fa fa-money fa-fw"></i> Add Newsletter
                    
                </h3><!-- panel-title Finish -->
                
@@ -48,59 +48,36 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
-                      <label class="col-md-3 control-label"> Event </label> 
+                      <label class="col-md-3 control-label"> File Name </label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
-                          <input name="event" type="text" class="form-control" required>
+                          <input name="name" type="text" class="form-control" required>
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+                 
+                   <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label">News Letter</label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="newsletter" type="file" class="form-control" required>
                           
                       </div><!-- col-md-6 Finish -->
                        
                    </div><!-- form-group Finish -->
                    
-                   <div class="form-group"><!-- form-group Begin -->
-                       
-                      <label class="col-md-3 control-label">Venue </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <input name="venue" type="text" class="form-control" required>
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-                   
-                   <div class="form-group"><!-- form-group Begin -->
-                       
-                      <label class="col-md-3 control-label"> Details </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <input name="details" type="text" class="form-control" required>
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-                   
-                   <div class="form-group"><!-- form-group Begin -->
-                       
-                      <label class="col-md-3 control-label"> Date </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <input name="date" type="date" class="form-control" required>
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-                                    
+                  
                    <div class="form-group"><!-- form-group Begin -->
                        
                       <label class="col-md-3 control-label"></label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
-                          <input name="submit" value="Add Event" type="submit" class="btn btn-primary form-control">
+                          <input name="submit" value="Add" type="submit" class="btn btn-primary form-control">
                           
                       </div><!-- col-md-6 Finish -->
                        
@@ -121,20 +98,21 @@
 
 if(isset($_POST['submit'])){
     
-    $event = $_POST['event'];
-    $venue = $_POST['venue'];
-    $details = $_POST['details'];
-    $date = $_POST['date'];
+    $name = $_POST['name'];
     
+    $newsletter = $_FILES['newsletter']['name'];
+    $temp_newsletter = $_FILES['newsletter']['tmp_name'];
     
-    $add_event = "insert into events (event,venue,details,date) values ('$event','$venue','$details','$date')";
+    move_uploaded_file($temp_newsletter,"../newsletters/$newsletter");
     
-    $run_event = mysqli_query($con,$add_event);
+    $add_newsletter = "insert into newsletter (name,newsletter) values ('$name','$newsletter')";
     
-    if($run_event){
+    $run_newsletter = mysqli_query($con,$add_newsletter);
+    
+    if($run_newsletter){
         
-        echo "<script>alert('Event Added sucessfully')</script>";
-        echo "<script>window.open('index.php?view_events','_self')</script>";
+        echo "<script>alert('Newsletter Added sucessfully')</script>";
+        echo "<script>window.open('index.php?view_newsletter','_self')</script>";
         
     }
     

@@ -115,21 +115,21 @@
                         
                         include("add_events.php");
                         
-                }   if(isset($_GET['edit_p_cat'])){
+                }   if(isset($_GET["add_newsletter"])){
                         
-                        include("edit_p_cat.php");
+                        include("add_newsletter.php");
                         
-                }    if(isset($_GET['insert_slide'])){
+                }    if(isset($_GET['view_newsletter'])){
                         
-                        include("insert_slide.php");
+                        include("view_newsletter.php");
                         
-                }   if(isset($_GET['view_slides'])){
+                }   if(isset($_GET['delete_newsletter'])){
                         
-                        include("view_slides.php");
+                        include("delete_newsletter.php");
                         
-                }   if(isset($_GET['delete_slide'])){
+                }   if(isset($_GET['delete_event'])){
                         
-                        include("delete_slide.php");
+                        include("delete_event.php");
                         
                 }   if(isset($_GET['edit_slide'])){
                         

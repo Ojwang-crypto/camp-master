@@ -13,7 +13,7 @@
         <ol class="breadcrumb"><!-- breadcrumb begin -->
             <li class="active"><!-- active begin -->
                 
-                <i class="fa fa-dashboard"></i> Dashboard / View events
+                <i class="fa fa-dashboard"></i> Dashboard / View Newsletter
                 
             </li><!-- active finish -->
         </ol><!-- breadcrumb finish -->
@@ -26,7 +26,7 @@
             <div class="panel-heading"><!-- panel-heading begin -->
                <h3 class="panel-title"><!-- panel-title begin -->
                
-                   <i class="fa fa-tags"></i>  View events
+                   <i class="fa fa-tags"></i>  View Newsletter
                 
                </h3><!-- panel-title finish --> 
             </div><!-- panel-heading finish -->
@@ -38,11 +38,9 @@
                         <thead><!-- thead begin -->
                             <tr><!-- tr begin -->
                                 <th> ID</th>
-                                <th> Event Name</th>
-                                <th> Venue </th>
-                                <th> Details </th>
-                                <th> Date </th>
-                                
+                                <th> File Name</th>
+                                <th> Newsletter</th>
+                                                   
                                 <th colspan="2">  Action </th>
                             </tr><!-- tr finish -->
                         </thead><!-- thead finish -->
@@ -53,22 +51,17 @@
           
                                 $i=0;
                             
-                                $get_event = "select * from events";
+                                $get_newsletter = "select * from newsletter";
                                 
-                                $run_event = mysqli_query($con,$get_event);
+                                $run_newsletter = mysqli_query($con,$get_newsletter);
           
-                                while($row_event=mysqli_fetch_array($run_event)){
+                                while($row_event=mysqli_fetch_array($run_newsletter)){
                                     
-                                    $event_id = $row_event['id'];
+                                    $newsletter_id = $row_event['id'];
                                     
-                                    $event = $row_event['event'];
+                                    $name = $row_event['name'];
                                     
-                                    $venue = $row_event['venue'];
-                                    
-                                    $details = $row_event['details'];
-                                    
-                                    $date = $row_event['date'];
-                                    
+                                    $newsletter = $row_event['newsletter'];
                                     
                                     $i++;
                             
@@ -76,31 +69,19 @@
                             
                             <tr><!-- tr begin -->
                                 <td> <?php echo $i; ?> </td>
-                                <td> <?php echo $event; ?> </td>
-                                <td> <?php echo $venue; ?> </td>
-                                <td> <?php echo $details; ?> </td>
-                                <td> <?php echo $date; ?> </td>
-                                
-                                
+                                <td> <?php echo $name; ?> </td>
+                                <td> <?php echo $newsletter; ?> </td>                                
                                 
                                 <td> 
                                      
-                                     <a href="index.php?delete_event=<?php echo $event_id; ?>">
+                                     <a href="index.php?delete_newsletter=<?php echo $newsletter_id; ?>">
                                      
                                         <i class="fa fa-trash-o"></i> Delete
                                     
                                      </a> 
                                      
                                 </td>
-                                <td> 
-                                     
-                                     <a href="index.php?edit_event=<?php echo $event_id; ?>">
-                                     
-                                        <i class="fa fa-pencil"></i> Edit
-                                    
-                                     </a> 
-                                    
-                                </td>
+                                
                             </tr><!-- tr finish -->
                             
                             <?php } ?>

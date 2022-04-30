@@ -1,5 +1,13 @@
+<?php
+
+  session_start();
+    include("admin/includes/db.php");
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+  
 
 
 <!-- Mirrored from campdraftingtasmania.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Apr 2022 07:20:37 GMT -->
@@ -178,52 +186,54 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Event</th>
-      <th scope="col">Venue</th>
-      <th scope="col">Details</th>
+      <th>#</th>
+      <th>Date</th>
+      <th>Event</th>
+      <th>Venue</th>
+      <th>Details</th>
     </tr>
   </thead>
-  <tbody>
-     <!-- <tr>
-         <td> 2021 dates</td>
-         <td>to be</td>
-         <td>updated</td>
-         <td>soon</td>
-      </tr>
-   
-   
-     <tr>
-      <th scope="row"> Jan 15th</th>
-      <td>Campdraft"Open $1000 Super Draft"</td>
-      <td>Powrana</td>
-      <td></td>
-    </tr>
-     <tr>
-      <th scope="row"> Feb 12th</th>
-      <td>Campdraft</td>
-      <td>Powrana</td>
-      <td>0800</td>
-    </tr>
-     <tr>
-      <th scope="row"> April 9th & 10th</th>
-      <td>Finals</td>
-      <td>Powranna</td>
-      <td><a href="newsletters/2022finals.pdf">Finals Program </a></td>
-    </tr>-->
-    <tr>
-      <th scope="row"> April 22nd</th>
-      <td>RSVP $ PAY CLUB FOR AWARD DINNER</td>
-      <td></td>
-      <td></td>
-    </tr>
-     <tr>
-      <th scope="row"> May 14th</th>
-      <td>Awards night</td>
-      <td>Great Lake Hotel</td>
-      <td></td>
-    </tr>
-  </tbody>
+  <tbody><!-- tbody begin -->
+                            
+                            <?php 
+          
+                                $i=0;
+                            
+                                $get_event = "select * from events order by 1 DESC LIMIT 0,3";
+                                
+                                $run_event = mysqli_query($con,$get_event);
+          
+                                while($row_event=mysqli_fetch_array($run_event)){
+                                    
+                                    $event_id = $row_event['id'];
+                                    
+                                    $event = $row_event['event'];
+                                    
+                                    $venue = $row_event['venue'];
+                                    
+                                    $details = $row_event['details'];
+                                    
+                                    $date = $row_event['date'];
+                                    
+                                    
+                                    
+                                    $i++;
+                            
+                            ?>
+                            
+                            <tr><!-- tr begin -->
+                                <td> <?php echo $i; ?> </td>
+                                <td> <?php echo $date; ?> </td>
+                                <td> <?php echo $event; ?> </td>
+                                <td> <?php echo $venue; ?> </td>
+                                <td> <?php echo $details; ?> </td>
+                               
+                                
+                            </tr><!-- tr finish -->
+                            
+                            <?php } ?>
+                            
+                        </tbody><!-- tbody finish -->
 </table>
         
         </div>
@@ -246,13 +256,52 @@
 
 <!-- our -->
 
+
 <div id="important" class="important">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="titlepage">
           <h2>Newsletters <strong class="yellow"></strong></h2>
-          <span>Click <a class="yellow" href="<?php echo $newsletter; ?>">here </a> to download latest newsletter </span>
+          <span>Download Latest Newsletter Here</span>
+
+              
+
+            <table class ="table">
+                <thead>
+
+                  <tr>
+                    <th>#</th>
+                    <th>File</th>
+                    <th>Action</th>
+                  </tr>
+
+                </thead>
+
+                <tbody>
+              <?php
+                 $db = new PDO("mysql:host=localhost;dbname=camp", "root", "");
+
+                  $stmt = $db -> prepare("SELECT * FROM newsletter");
+                  $stmt->execute();
+                 while($row = $stmt->fetch()){
+             ?>
+
+              <tr>
+                <td> <?php echo $row["id"]?></td>
+                <td> <?php echo $row["name"]?></td>
+                <td><a href="download.php?id=<?php echo $row["id"]?>" class="btn btn-primary">Download</a></td>
+             </tr>
+
+             <?php
+                }
+              ?>
+
+           </tbody>
+
+       </table>
+
+
          
           
         </div>
