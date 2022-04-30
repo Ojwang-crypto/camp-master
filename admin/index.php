@@ -131,9 +131,9 @@
                         
                         include("delete_event.php");
                         
-                }   if(isset($_GET['edit_slide'])){
+                }   if(isset($_GET['edit_event'])){
                         
-                        include("edit_slide.php");
+                        include("edit_event.php");
                         
                 }   if(isset($_GET['insert_box'])){
                         
