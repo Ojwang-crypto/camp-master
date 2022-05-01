@@ -7,43 +7,6 @@
     }else{
 
 ?>
-
-<?php 
-
-    if(isset($_GET['edit_event'])){
-        
-        $edit_id = $_GET['edit_event'];
-        
-        $get_event = "select * from events where id='$edit_id'";
-        
-        $run_edit = mysqli_query($con,$get_event);
-        
-        $row_edit = mysqli_fetch_array($run_edit);
-        
-        $id = $row_edit['id'];
-        
-        $event = $row_edit['event'];
-        
-        $venue = $row_edit['venue'];
-        
-        $details = $row_edit['details'];
-        
-        $date = $row_edit['date'];
-        
-        
-    }
-        
-        
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Edit Event </title>
-</head>
-<body>
     
 <div class="row"><!-- row Begin -->
     
@@ -53,7 +16,7 @@
             
             <li class="active"><!-- active Begin -->
                 
-                <i class="fa fa-dashboard"></i> Dashboard / Edit Event
+                <i class="fa fa-dashboard"></i> Dashboard / Manage Admin
                 
             </li><!-- active Finish -->
             
@@ -73,7 +36,7 @@
                
                <h3 class="panel-title"><!-- panel-title Begin -->
                    
-                   <i class="fa fa-money fa-fw"></i> Edit Event
+                   <i class="fa fa-money fa-fw"></i> Manage Admin
                    
                </h3><!-- panel-title Finish -->
                
@@ -85,48 +48,11 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
-                      <label class="col-md-3 control-label"> Event </label> 
+                      <label class="col-md-3 control-label"> First Name </label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
-                          <input name="event" type="text" class="form-control" required value="<?php echo $event; ?>">
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-    
-                   
-                  <div class="form-group"><!-- form-group Begin -->
-                       
-                      <label class="col-md-3 control-label"> venue </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <input name="venue" type="text" class="form-control" required value="<?php echo $venue; ?>">
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-                   
-                  <div class="form-group"><!-- form-group Begin -->
-                       
-                      <label class="col-md-3 control-label"> Details </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <input name="details" type="text" class="form-control" required value="<?php echo $details; ?>">
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-                   
-                  <div class="form-group"><!-- form-group Begin -->
-                       
-                      <label class="col-md-3 control-label"> Date </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <input name="date" type="date" class="form-control" required value="<?php echo $date; ?>">
+                          <input name="fname" type="text" class="form-control" required>
                           
                       </div><!-- col-md-6 Finish -->
                        
@@ -134,11 +60,47 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
+                      <label class="col-md-3 control-label">Last Name </label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="lname" type="text" class="form-control" required>
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+                   
+                   <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label"> Email </label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="email" type="email" class="form-control" required>
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+                   
+                  <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label"> Password </label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="password" type="password" class="form-control" required>
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+                                    
+                   <div class="form-group"><!-- form-group Begin -->
+                       
                       <label class="col-md-3 control-label"></label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
-                          <input name="update" value="Update" type="submit" class="btn btn-primary form-control">
+                          <input name="submit" value="Add admin" type="submit" class="btn btn-primary form-control">
                           
                       </div><!-- col-md-6 Finish -->
                        
@@ -153,32 +115,26 @@
     </div><!-- col-lg-12 Finish -->
     
 </div><!-- row Finish -->
-   
-    <script src="js/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea'});</script>
-</body>
-</html>
 
 
 <?php 
 
-if(isset($_POST['update'])){
+if(isset($_POST['submit'])){
     
-    $event = $_POST['event'];
-    $venue = $_POST['venue'];
-    $details = $_POST['details'];
-    $date = $_POST['date'];
+    $add_fname = $_POST['fname'];
+    $add_lname = $_POST['lname'];
+    $add_email = $_POST['email'];
+    $add_pass = $_POST['password'];
     
     
-    $update_event = "update events set id='$id',event='$event',venue='$venue',details='$details',date='$date'";
+    $add_admin = "insert into admin (fname,lname,email,password) values ('$add_fname','$add_lname','$add_email','$add_pass')";
     
-    $run_event = mysqli_query($con,$update_event);
+    $run_admin = mysqli_query($con,$add_admin);
     
-    if($run_event){
+    if($run_admin){
         
-       echo "<script>alert('Your Event has been updated Successfully')</script>"; 
-        
-       echo "<script>window.open('index.php?view_events','_self')</script>"; 
+        echo "<script>alert('Admin Added sucessfully')</script>";
+        echo "<script>window.open('index.php?view_admin','_self')</script>";
         
     }
     

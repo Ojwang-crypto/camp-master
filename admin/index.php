@@ -22,40 +22,6 @@
         $admin_name = $row_admin['fname'];
         
         $admin_email = $row_admin['email'];
-        
-        // $admin_image = $row_admin['admin_image'];
-        
-        // $admin_county = $row_admin['admin_county'];
-        
-        // $admin_about = $row_admin['admin_about'];
-        
-        // $admin_contact = $row_admin['admin_contact'];
-        
-        // $admin_job = $row_admin['admin_job'];
-        
-        // $get_products = "select * from products";
-        
-        // $run_products = mysqli_query($con,$get_products);
-        
-        // $count_products = mysqli_num_rows($run_products);
-        
-        // $get_customers = "select * from customers";
-        
-        // $run_customers = mysqli_query($con,$get_customers);
-        
-        // $count_customers = mysqli_num_rows($run_customers);
-        
-        // $get_p_categories = "select * from product_categories";
-        
-        // $run_p_categories = mysqli_query($con,$get_p_categories);
-        
-        // $count_p_categories = mysqli_num_rows($run_p_categories);
-        
-        // $get_pending_orders = "select * from pending_orders";
-        
-        // $run_pending_orders = mysqli_query($con,$get_pending_orders);
-        
-        // $count_pending_orders = mysqli_num_rows($run_pending_orders);
 
 ?>
 
@@ -86,26 +52,6 @@
                         
                         include("dashboard.php");
                         
-                // }   if(isset($_GET['insert_product'])){
-                        
-                //         include("insert_product.php");
-                        
-                // }   if(isset($_GET['view_products'])){
-                        
-                //         include("view_products.php");
-                        
-                // }   if(isset($_GET['delete_product'])){
-                        
-                //         include("delete_product.php");
-                        
-                // }   if(isset($_GET['edit_product'])){
-                        
-                //         include("edit_product.php");
-                        
-                // }   if(isset($_GET['insert_p_cat'])){
-                        
-                //         include("insert_p_cat.php");
-                        
                 }   
                 if(isset($_GET['view_events'])){//edited
                         
@@ -135,109 +81,18 @@
                         
                         include("edit_event.php");
                         
-                }   if(isset($_GET['insert_box'])){
+                }   if(isset($_GET['manage_admin'])){
                         
-                        include("insert_box.php");
+                        include('manage_admin.php');
                         
-                }   if(isset($_GET['view_boxes'])){
+                }  if(isset($_GET['view_admin'])){
                         
-                        include("view_boxes.php");
+                        include('view_admin.php');
                         
-                }   if(isset($_GET['delete_box'])){
+                }  if(isset($_GET['delete_admin'])){
                         
-                        include("delete_box.php");
-                        
-                }   if(isset($_GET['edit_box'])){
-                        
-                        include("edit_box.php");
-                        
-                }   if(isset($_GET['view_customers'])){
-                        
-                        include("view_customers.php");
-
-                }   if(isset($_GET['messages'])){
-                        
-                        include("messages.php");
-                 }   if(isset($_GET['reports'])){
-                        
-                        include("reports.php");
-
-                 }   if(isset($_GET['delete_messages'])){
-                        
-                        include("delete_messages.php");
-                        
-                }   if(isset($_GET['delete_customer'])){
-                        
-                        include("delete_customer.php");
-                        
-                }   if(isset($_GET['view_orders'])){
-                        
-                        include("view_orders.php");
-                        
-                }   if(isset($_GET['delete_order'])){
-                        
-                        include("delete_order.php");
-                        
-                }   if(isset($_GET['view_payments'])){
-                        
-                        include("view_payments.php");
-                        
-                }   if(isset($_GET['delete_payment'])){
-                        
-                        include("delete_payment.php");
-                        
-                }   if(isset($_GET['view_users'])){
-                        
-                        include("view_users.php");
-                        
-                }   if(isset($_GET['delete_user'])){
-                        
-                        include("delete_user.php");
-                        
-                }   if(isset($_GET['insert_user'])){
-                        
-                        include("insert_user.php");
-                        
-                }   if(isset($_GET['user_profile'])){
-                        
-                        include("user_profile.php");
-                        
-                }   if(isset($_GET['insert_terms'])){
-                        
-                        include("insert_terms.php");
-                        
-                }   if(isset($_GET['view_terms'])){
-                        
-                        include("view_terms.php");
-                        
-                }   if(isset($_GET['delete_term'])){
-                        
-                        include("delete_term.php");
-                        
-                }   if(isset($_GET['edit_term'])){
-                        
-                        include("edit_term.php");
-                        
-                }   if(isset($_GET['edit_css'])){
-                        
-                        include("edit_css.php");
-                        
-                }   if(isset($_GET['insert_manufacturer'])){
-                        
-                        include("insert_manufacturer.php");
-                        
-                }   if(isset($_GET['view_manufacturers'])){
-                        
-                        include("view_manufacturers.php");
-                        
-                }   if(isset($_GET['delete_manufacturer'])){
-                        
-                        include("delete_manufacturer.php");
-                        
-                }   if(isset($_GET['edit_manufacturer'])){
-                        
-                        include("edit_manufacturer.php");
-                        
+                        include('delete_admin.php');
+                
                 }
                
         

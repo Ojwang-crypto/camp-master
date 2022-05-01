@@ -13,7 +13,7 @@
         <ol class="breadcrumb"><!-- breadcrumb begin -->
             <li class="active"><!-- active begin -->
                 
-                <i class="fa fa-dashboard"></i> Dashboard / View events
+                <i class="fa fa-dashboard"></i> Dashboard / View Admin
                 
             </li><!-- active finish -->
         </ol><!-- breadcrumb finish -->
@@ -26,7 +26,7 @@
             <div class="panel-heading"><!-- panel-heading begin -->
                <h3 class="panel-title"><!-- panel-title begin -->
                
-                   <i class="fa fa-tags"></i>  View events
+                   <i class="fa fa-tags"></i>  View Admin
                 
                </h3><!-- panel-title finish --> 
             </div><!-- panel-heading finish -->
@@ -38,10 +38,10 @@
                         <thead><!-- thead begin -->
                             <tr><!-- tr begin -->
                                 <th> ID</th>
-                                <th> Event Name</th>
-                                <th> Venue </th>
-                                <th> Details </th>
-                                <th> Date </th>
+                                <th> First Name</th>
+                                <th> Last Name </th>
+                                <th> Email </th>
+                                <th> password </th>
                                 
                                 <th colspan="2">  Action </th>
                             </tr><!-- tr finish -->
@@ -53,21 +53,21 @@
           
                                 $i=0;
                             
-                                $get_event = "select * from events";
+                                $get_admin = "select * from admin";
                                 
-                                $run_event = mysqli_query($con,$get_event);
+                                $run_admin = mysqli_query($con,$get_admin);
           
-                                while($row_event=mysqli_fetch_array($run_event)){
+                                while($row_event=mysqli_fetch_array($run_admin)){
                                     
-                                    $event_id = $row_event['id'];
+                                    $admin_id = $row_event['id'];
                                     
-                                    $event = $row_event['event'];
+                                    $fname = $row_event['fname'];
                                     
-                                    $venue = $row_event['venue'];
+                                    $lname = $row_event['lname'];
                                     
-                                    $details = $row_event['details'];
+                                    $email = $row_event['email'];
                                     
-                                    $date = $row_event['date'];
+                                    $password = $row_event['password'];
                                     
                                     
                                     $i++;
@@ -76,16 +76,16 @@
                             
                             <tr><!-- tr begin -->
                                 <td> <?php echo $i; ?> </td>
-                                <td> <?php echo $event; ?> </td>
-                                <td> <?php echo $venue; ?> </td>
-                                <td> <?php echo $details; ?> </td>
-                                <td> <?php echo $date; ?> </td>
+                                <td> <?php echo $fname; ?> </td>
+                                <td> <?php echo $lname; ?> </td>
+                                <td> <?php echo $email; ?> </td>
+                                <td> <?php echo $password; ?> </td>
                                 
                                 
                                 
                                 <td> 
                                      
-                                     <a href="index.php?delete_event=<?php echo $event_id; ?>">
+                                     <a href="index.php?delete_admin=<?php echo $admin_id; ?>">
                                      
                                         <i class="fa fa-trash-o"></i> Delete
                                     

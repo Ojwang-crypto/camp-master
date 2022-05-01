@@ -144,8 +144,13 @@
             
             
             <li><!-- li begin -->
-                <a href="#"><!-- a href begin -->
-                    <i class="fa fa-fw fa-users"></i> Manage Admin
+                <a href="index.php?manage_admin"><!-- a href begin -->
+                    <i class="fa fa-fw fa-users"></i> Add Admin
+                </a><!-- a href finish -->
+            </li><!-- li finish -->
+            <li><!-- li begin -->
+                <a href="index.php?view_admin"><!-- a href begin -->
+                    <i class="fa fa-fw fa-users"></i> view Admin
                 </a><!-- a href finish -->
             </li><!-- li finish -->
             

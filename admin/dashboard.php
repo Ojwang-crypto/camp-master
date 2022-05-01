@@ -39,14 +39,14 @@
                     <div class="col-xs-9 text-right"><!-- col-xs-9 text-right begin -->
                         <div class="huge"> </div>
                            
-                        <div> Products </div>
+                        <div> Events </div>
                         
                     </div><!-- col-xs-9 text-right finish -->
                     
                 </div><!-- panel-heading row finish -->
             </div><!-- panel-heading finish -->
             
-            <a href="index.php?view_products"><!-- a href begin -->
+            <a href="index.php?view_events"><!-- a href begin -->
                 <div class="panel-footer"><!-- panel-footer begin -->
                    
                     <span class="pull-left"><!-- pull-left begin -->
@@ -79,14 +79,14 @@
                     <div class="col-xs-9 text-right"><!-- col-xs-9 text-right begin -->
                         <div class="huge">  </div>
                            
-                        <div> Customers </div>
+                        <div> Newsletter </div>
                         
                     </div><!-- col-xs-9 text-right finish -->
                     
                 </div><!-- panel-heading row finish -->
             </div><!-- panel-heading finish -->
             
-            <a href="index.php?view_customers"><!-- a href begin -->
+            <a href="index.php?view_newsletter"><!-- a href begin -->
                 <div class="panel-footer"><!-- panel-footer begin -->
                    
                     <span class="pull-left"><!-- pull-left begin -->
@@ -119,14 +119,14 @@
                     <div class="col-xs-9 text-right"><!-- col-xs-9 text-right begin -->
                         <div class="huge">  </div>
                            
-                        <div> Product Categories </div>
+                        <div> Admin </div>
                         
                     </div><!-- col-xs-9 text-right finish -->
                     
                 </div><!-- panel-heading row finish -->
             </div><!-- panel-heading finish -->
             
-            <a href="index.php?view_p_cats"><!-- a href begin -->
+            <a href="index.php?view_admin"><!-- a href begin -->
                 <div class="panel-footer"><!-- panel-footer begin -->
                    
                     <span class="pull-left"><!-- pull-left begin -->
@@ -159,14 +159,14 @@
                     <div class="col-xs-9 text-right"><!-- col-xs-9 text-right begin -->
                         <div class="huge">  </div>
                            
-                        <div> Orders </div>
+                        <div>  </div>
                         
                     </div><!-- col-xs-9 text-right finish -->
                     
                 </div><!-- panel-heading row finish -->
             </div><!-- panel-heading finish -->
             
-            <a href="index.php?view_orders"><!-- a href begin -->
+            <a href="#"><!-- a href begin -->
                 <div class="panel-footer"><!-- panel-footer begin -->
                    
                     <span class="pull-left"><!-- pull-left begin -->

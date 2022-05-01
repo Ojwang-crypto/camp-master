@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2022 at 02:59 PM
+-- Generation Time: May 01, 2022 at 04:10 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -40,7 +40,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `fname`, `lname`, `email`, `password`) VALUES
-(1, 'joy', 'marocho', 'joy@gmail.com', 'joy');
+(1, 'joy', 'marocho', 'joy@gmail.com', 'joy'),
+(2, 'camp', 'Tasmania', 'camp@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -62,10 +63,7 @@ CREATE TABLE `events` (
 
 INSERT INTO `events` (`id`, `event`, `venue`, `details`, `date`) VALUES
 (2, 'Swimming', 'California', 'Swimming Competition', '2022-05-04'),
-(3, 'Test', 'Test', 'Test', '2022-05-03'),
-(4, 'Testing', 'Test', 'Tes', '2022-05-02'),
-(5, 'olnonn', 'npino[', 'nopop[', '2022-05-05'),
-(6, 'olnonn', 'npino[', 'nopop[', '2022-05-05');
+(3, 'Test', 'Test', 'Test', '2022-05-03');
 
 -- --------------------------------------------------------
 
@@ -116,7 +114,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -128,7 +126,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `newsletter`
 --
 ALTER TABLE `newsletter`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

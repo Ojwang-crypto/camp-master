@@ -282,7 +282,7 @@
               <?php
                  $db = new PDO("mysql:host=localhost;dbname=camp", "root", "");
 
-                  $stmt = $db -> prepare("SELECT * FROM newsletter");
+                  $stmt = $db -> prepare("SELECT * FROM newsletter order by 1 DESC LIMIT 0,1");
                   $stmt->execute();
                  while($row = $stmt->fetch()){
              ?>
